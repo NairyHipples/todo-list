@@ -14,22 +14,27 @@
       <header>
         <nav role="navigation">
           <ul class="nav nav-pills nav-justified">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">Profile</a></li>
-            <li role="presentation"><a href="#">Messages</a></li>
+            <li role="presentation" class="active"><a href="#">TO DO
+              <span class="glyphicon glyphicon-list-alt"></span>
+            </a></li>
+            <li role="presentation"><a href="#">DONE
+              <span class="glyphicon glyphicon-ok"></span>
+            </a></li>
           </ul>
         </nav>
 
       </header>
     </div>
-    <div class="container">
+    <div class="container toDoContainer">
 
-      <h1>To Do:</h1>
-
-      <input type="text" name="name" value="">
-      <button class="addItemButton btn btn-primary" type="button" name="Add Item">Add
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      </button>
+      <p>Things to do:</p>
+      <div class="input-group">
+      <span class="input-group-btn">
+        <button class="addItemButton btn btn-primary" type="button" name="Add item">
+        <span class="glyphicon glyphicon-plus"></span></button>
+      </span>
+        <input type="text" class="form-control" placeholder="I need to...">
+      </div>
 
       <ul class="toDoList">
       </ul>
