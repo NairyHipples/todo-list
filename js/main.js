@@ -1,26 +1,43 @@
+$('button').click(function(){
+  $('main').load($(this).val());
+});
+
+
 /************************
    BUTTON DECLARATION
 ************************/
-var doneButton = "<button class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button>";
-var editButton = "<button class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span></button>";
-var deleteButton = "<button class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button>";
+var doneButtonCode = "<button class='doneButton btn btn-success'><span class='glyphicon glyphicon-ok'></span></button>";
+var editButtonCode = "<button class='editButton btn btn-warning'><span class='glyphicon glyphicon-pencil'></span></button>";
+var deleteButtonCode = "<button class='deleteButton btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button>";
 /************************
   ADD TO LIST FUNCTION
+   (delete included)
 ************************/
 //Find and Bind the button
 $('.addItemButton').click(function(){
+
   //Grab value from the input field
   var value = $('input').val();
+
   //Add it to the list
-  $('.toDoList').append("<li>" + value + "</li>" + doneButton + editButton + deleteButton);
+  $('.toDoList').prepend("<li>" + value + "<br>" + doneButtonCode + editButtonCode + deleteButtonCode + "</li>");
+
+
+  //Done Button
+  $('.doneButton').click(function(){
+
+    //$(this).parent().detach();
+  });
+  //Edit Button
+  $('.editButton').click(function(){
+
+  });
+  //Delete Button
+  $('.deleteButton').click(function(){
+    $(this).parent().detach();
+  });
 
 });
-
-
 /************************
-REMOVE FROM LIST FUNCTION
+         LOOPS
 ************************/
-//Find and Bind the button
-$(deleteButton).click(function(){
-  $(this).parent().detach();
-});

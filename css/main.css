@@ -1,6 +1,24 @@
 body {
   font-size: 40px;
 }
+
+nav {
+  margin-bottom: 30px;
+}
+
+.toDoList li {
+  padding: 0px 20px 0px 20px;
+  margin-top: 10px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  list-style-type: none;
+}
+
+.toDoList {
+  margin-left: 40px;
+}
+
 button {
   width: 70px;
+  margin-left: 10px;
 }
