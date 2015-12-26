@@ -13,19 +13,27 @@ $('.addItemButton').click(function(){
 
   //Grab value from the input field
   var value = $('input').val();
-
+  var test = "<li>" + value + "<br>" + doneButtonCode + editButtonCode + deleteButtonCode + "</li>";
+  var test2 = "";
   //Add it to the list
-  $('.toDoList').prepend("<li>" + value + "<br>" + doneButtonCode + editButtonCode + deleteButtonCode + "</li>");
-
+  $('.toDoList').prepend(test);
 
   //Done Button
   $('.doneButton').click(function(){
     $(this).parent().prependTo('.doneList').addClass('doneTask');
-    if (".doneTask"){
-      $('.doneButton').detach();
-      $('.editButton').detach();
-    }
-  console.log("hej");
+    // $(this).replaceWith(test2);
+    //Provade med replaceWith, fick bra resultat förutom att
+    //.editButton följde med. Raderade det.
+
+
+    // if ($(this).parent('.doneTask')){
+    //    $('.doneButton').detach();
+    //    $('.editButton').detach();
+    // }
+    // if (".doneTask"){
+    //   (this).('.doneButton').detach();
+    //   $('.editButton').detach();
+    //   console.log("hej");
   });
   //Edit Button
   $('.editButton').click(function(){
