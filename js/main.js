@@ -1,5 +1,5 @@
 $('.toDoLoad').click(function(){
-  $('main').load($(this).val());
+  $('main').load('todo.html');
 });
 
 
