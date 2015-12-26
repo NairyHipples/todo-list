@@ -1,4 +1,4 @@
-$('button').click(function(){
+$('.toDoLoad').click(function(){
   $('main').load($(this).val());
 });
 
