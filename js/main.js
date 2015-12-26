@@ -1,9 +1,3 @@
-$('.toDoLoad').click(function(){
-  $('main').load('todo.html');
-});
-
-
-
 /************************
    BUTTON DECLARATION
 ************************/
@@ -26,8 +20,12 @@ $('.addItemButton').click(function(){
 
   //Done Button
   $('.doneButton').click(function(){
-
-    //$(this).parent().detach();
+    $(this).parent().prependTo('.doneList').addClass('doneTask');
+    if (".doneTask"){
+      $('.doneButton').detach();
+      $('.editButton').detach();
+    }
+  console.log("hej");
   });
   //Edit Button
   $('.editButton').click(function(){
@@ -37,8 +35,32 @@ $('.addItemButton').click(function(){
   $('.deleteButton').click(function(){
     $(this).parent().detach();
   });
-
 });
+
+  // $('.doneButton').detach();
+  // $('.editButton').detach();
 /************************
          LOOPS
 ************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $('.toDoLoad').click(function(){
+//   $('main').load('todo.html');
+// });
+// Bad try for a good thing
