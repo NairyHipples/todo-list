@@ -2,14 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To Do List</title>
-    
-    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
   </head>
   <body>
+    <div class="container">
+
+      <header>
+        <nav role="navigation">
+          <ul class="nav nav-pills nav-justified">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Messages</a></li>
+          </ul>
+        </nav>
+
+      </header>
+    </div>
+    <div class="container">
+
+      <h1>To Do:</h1>
+
+      <input type="text" name="name" value="">
+      <button class="addItemButton btn btn-primary" type="button" name="Add Item">Add
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+
+      <ul class="toDoList">
+      </ul>
+
+    </div>
+<!--glyphicon glyphicon-pencil & glyphicon glyphicon-trash & glyphicon glyphicon-ok & glyphicon glyphicon-remove -->
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
     <script src="js/bootstrap.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
