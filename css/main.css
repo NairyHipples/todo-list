@@ -1,16 +1,14 @@
 body {
   font-size: 40px;
 }
-
 nav {
-  margin-bottom: 30px;
+  background-color: #CCC;
 }
 
 .toDoList li, .doneList li {
   padding: 0px 20px 0px 20px;
   margin-top: 10px;
   border: 1px solid #CCC;
-  border-radius: 4px;
   list-style-type: none;
 }
 
@@ -22,3 +20,9 @@ button {
   width: 70px;
   margin-left: 10px;
 }
+.editButton {
+  width: 220px;
+}
+/*.editInput {
+  display: none;
+}*/

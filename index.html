@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To Do List</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
   </head>
   <body>
     <div class="container">
@@ -33,27 +34,27 @@
         <button class="addItemButton btn btn-primary" type="button" name="Add item">
         <span class="glyphicon glyphicon-plus"></span></button>
       </span>
-        <input type="text" class="form-control" placeholder="I need to...">
+        <input type="text" class="form-control" id="innput" placeholder="I need to...">
       </div>
       <ul class="toDoList">
-      
+
       </ul>
 
     </div>
     <div class="container doneContainer" id="done">
-      <p>Done:</p>
+      <div class="donelistSpacer"><p>Done:</p>
       <ul class="doneList">
 
-      </ul>
+      </ul></div>
     </div>
 
 
     </main>
 
 <!--glyphicon glyphicon-pencil & glyphicon glyphicon-trash & glyphicon glyphicon-ok & glyphicon glyphicon-remove -->
-
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
     <script src="js/bootstrap.js" charset="utf-8"></script>
+    <!-- <script src="js/fire.js" charset="utf-8"></script>-->
     <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
