@@ -13,40 +13,29 @@ $('.addItemButton').click(function(){
 
   //Grab value from the input field
   var value = $('input').val();
-  var test = "<li>" + value + "<br>" + doneButtonCode + editButtonCode + deleteButtonCode + "</li>";
-  var test2 = "";
+
   //Add it to the list
-  $('.toDoList').prepend(test);
+  $('.toDoList').prepend("<li>" + value + "<br>" + doneButtonCode + editButtonCode + deleteButtonCode + "</li>");
 
   //Done Button
   $('.doneButton').click(function(){
     $(this).parent().prependTo('.doneList').addClass('doneTask');
-    // $(this).replaceWith(test2);
-    //Provade med replaceWith, fick bra resultat förutom att
-    //.editButton följde med. Raderade det.
-
-
-    // if ($(this).parent('.doneTask')){
-    //    $('.doneButton').detach();
-    //    $('.editButton').detach();
-    // }
-    // if (".doneTask"){
-    //   (this).('.doneButton').detach();
-    //   $('.editButton').detach();
-    //   console.log("hej");
+    $('.doneTask').find('.editButton').detach();
+    $('.doneTask').find('.doneButton').detach();
   });
+
   //Edit Button
   $('.editButton').click(function(){
-
+    $
   });
+
   //Delete Button
   $('.deleteButton').click(function(){
     $(this).parent().detach();
   });
+
 });
 
-  // $('.doneButton').detach();
-  // $('.editButton').detach();
 /************************
          LOOPS
 ************************/
@@ -67,6 +56,28 @@ $('.addItemButton').click(function(){
 
 
 
+/******************************
+         DELETED CODE
+(to remind me of my progress)
+******************************/
+
+// $('.doneButton').detach();
+// $('.editButton').detach();
+
+    //test === test2 ? $('.editButton').detach() : $('.doneButton').detach();
+    // $(this).replaceWith(test2);
+    //Provade med replaceWith, fick bra resultat förutom att
+    //.editButton följde med. Raderade det.
+
+
+    // if ($(this).parent('.doneTask')){
+    //    $('.doneButton').detach();
+    //    $('.editButton').detach();
+    // }
+    // if (".doneTask"){
+    //   (this).('.doneButton').detach();
+    //   $('.editButton').detach();
+    //   console.log("hej");
 
 // $('.toDoLoad').click(function(){
 //   $('main').load('todo.html');
